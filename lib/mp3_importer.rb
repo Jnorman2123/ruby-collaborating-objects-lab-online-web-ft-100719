@@ -6,7 +6,9 @@ class MP3Importer
   end
 
   def files
-
+    self.new(path) 
+    artist = path.split(" - ")[0]
+    song = path.split(" - ")[1]
   end
 
   def import(list_of_filenames)
