@@ -1,13 +1,13 @@
 class MP3Importer
-  attr_accessor :file
+  attr_accessor :path
 
-  def initialize(file)
-    @file = file
+  def initialize(path)
+    @path = path
   end
 
   def files
-    new_song = Song.new(file.split(" - ")[1])
-    new_song.artist.name = file.split(" - ")[0]
+    new_song = Song.new(path.split(" - ")[1])
+    new_song.artist.name = path.split(" - ")[0]
   end
 
   def import(list_of_filenames)
