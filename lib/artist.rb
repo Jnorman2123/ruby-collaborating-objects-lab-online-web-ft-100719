@@ -23,7 +23,7 @@ class Artist
     if @name == name
       @name
     else
-      @name
+      self.new(name)
     end
   end
 
