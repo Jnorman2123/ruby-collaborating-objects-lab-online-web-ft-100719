@@ -12,11 +12,11 @@ class Artist
   end
 
   def add_song
-    Song.all.collect { |song| song.artist.name == self}
+    song.artist = self
   end
 
   def songs
-
+    Song.all.collect { |song| song.artist.name == self}
   end
 
   def self.find_or_create_by_name
