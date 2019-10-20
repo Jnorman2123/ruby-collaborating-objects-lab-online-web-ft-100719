@@ -21,7 +21,7 @@ class Artist
 
   def self.find_or_create_by_name(name)
     if @name == name
-      self.name
+      @name
     else
       self.new(name)
     end
