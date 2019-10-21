@@ -11,6 +11,9 @@ class MP3Importer
   end
 
   def import(list_of_filenames)
-    list_of_filenames.each { |filename| Song.new_by_filename(filename)}
+    list_of_filenames.each do |filename|
+      Song.new_by_filename(filename)
+      Arist.find_or_create_by_name(filename)
+    end
   end
 end
